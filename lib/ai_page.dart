@@ -6,9 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 // Ambil API key dari .env
 final String groqApiKey = dotenv.env['GROQ_API_KEY'] ?? '';
 
-// Ganti pemanggilan API di kodemu menggunakan variabel groqApiKey
-// Contoh: headers: {'Authorization': 'Bearer $groqApiKey'}
-// ── Model Groq (gratisan semua) ────────────────────────
+// ── Model Groq (gratisan semua) ────────────────────
 const String _model = 'llama-3.3-70b-versatile'; 
 // Alternatif: 'mixtral-8x7b-32768', 'llama-3.1-8b-instant', 'gemma2-9b-it'
 
