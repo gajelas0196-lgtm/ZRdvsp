@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-// Ambil API key dari .env
-final String groqApiKey = dotenv.env['GROQ_API_KEY'] ?? '';
+// Ambil API key dari .env (lokal) atau dari GitHub Secrets (saat build APK)
+final String groqApiKey = dotenv.env['GROQ_API_KEY'] ?? 
+  const String.fromEnvironment('GROQ_API_KEY');
 
 // ── Model Groq (gratisan semua) ────────────────────
 const String _model = 'llama-3.3-70b-versatile'; 
